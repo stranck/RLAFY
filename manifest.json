@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "RLAFY by Stranck",
+  "description": "Remove Limited Ads From Youtube - Automatically request manual review for all of your videos!",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+	"activeTab",
+	"https://ajax.googleapis.com/",
+	"*://*/*"
+  ],
+  "externally_connectable" : {
+	"matches" : ["*://www.youtube.com/*"]
+  },
+  "content_scripts" : [
+	{
+		"matches" : ["*://www.youtube.com/*"],
+		"js" : ["loader.js"],
+		"run_at" : "document_idle",
+		"all_frames" : true
+	}
+  ],
+  "web_accessible_resources": ["script.js"],
+  "icons": {
+	"128" : "RLAFY128.png"
+  }
+}
