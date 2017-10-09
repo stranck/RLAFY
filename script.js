@@ -65,7 +65,10 @@ function dashboard(url) {
             if (ids.length > 0) nextId(ids, url, "pi", '?'); //go to the first id
             else nextPage(url, "pi", '?'); //if no demonetized video, go to the next page
         }
-    } else alert("RLAFY - Done!");
+    } else {
+        url.replace("https://www.youtube.com/channel/UCmMWUz0QZ7WhIBx-1Dz-IGg");
+        alert("RLAFY - Done!\nRequested manual review for all of your videos!\n\nProgrammed by Stranck. Please consider to leave a star on my github");
+    }
 }
 
 //EDIT
@@ -129,28 +132,3 @@ if (url.href.includes("my_videos")) {
     console.log("Detected edit page");
     edit(url);
 }
-
-//document.getElementsByClassName("yt-uix-button yt-uix-button-size-default yt-uix-button-primary ad-friendly-appeal-button")[0].click()
-//document.getElementsByClassName("yt-uix-form-input-checkbox ng-pristine ng-valid ng-touched")[0].click() NON FUNZIONA
-//document.getElementsByClassName("yt-uix-form-input-checkbox ng-valid ng-touched ng-dirty ng-valid-parse")[0].click() NON FUNZIONA
-//document.getElementsByClassName("yt-uix-form-input-checkbox ng-pristine ng-untouched ng-valid")[8].click()
-//document.getElementsByClassName("yt-uix-button yt-uix-button-size-default yt-uix-button-primary")[4].click()
-//https://www.youtube.com/yts/jslib/angular.min-vflLZz5Xb.js:formatted :733
-
-/*
-document.getElementsByClassName("yt-uix-button yt-uix-button-size-default yt-uix-button-primary ad-friendly-appeal-button")[0].click()
-setTimeout(function () { document.getElementsByClassName("yt-uix-form-input-checkbox ng-pristine ng-untouched ng-valid")[8].click()}, 500);
-setTimeout(function () { document.getElementsByClassName("yt-uix-button yt-uix-button-size-default yt-uix-button-primary")[4].click() }, 500);
-*//*
-document.getElementsByClassName("yt-uix-button yt-uix-button-size-default yt-uix-button-primary ad-friendly-appeal-button")[0].click()
-document.getElementsByClassName("yt-uix-form-input-checkbox ng-pristine ng-untouched ng-valid")[8].click()
-document.getElementsByClassName("yt-uix-button yt-uix-button-size-default yt-uix-button-primary")[4].click()
-*/
-
-//document.getElementsByClassName("yt-uix-button  yt-uix-pager-button yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default")
-//yt-uix-sessionlink vm-video-monetization-link
-
-//vm-video-monetization-limited-or-no-ads vm-video-monetization-icon yt-uix-tooltip-reverse yt-uix-tooltip yt-sprite
-//    var pages = document.getElementsByClassName("yt-uix-button  yt-uix-pager-button yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default");
-//return getParameterByName("pi", url.href, '?') > getParameterByName("pi", pages[pages.length - 1].href, '?');
-//    return document.getElementsByClassName("yt-uix-button yt-uix-button-size-default yt-uix-button-primary ad-friendly-appeal-button").length > 0;
