@@ -111,7 +111,6 @@ function requestReview(operation) {
 function edit(url) {
     if (checkIfDemonetized()) {
         console.log("Requesting manual review");
-        alert("REQUESTING REVIEW");
         requestReview(0);
     } else {
         console.log("Already requested / not demonetized");
